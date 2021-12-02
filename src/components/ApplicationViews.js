@@ -12,30 +12,21 @@ import { EmployeeList } from "./employee/EmployeeList"
 
 export const ApplicationViews = () => {
     return (
-        <>
+        <LocationProvider>
+        <AnimalProvider>
+        <CustomerProvider>
+        <EmployeeProvider>
+
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="locations/*" element={<LocationList />} />
+                <Route path="animals/*" element={<AnimalList />} />
+                <Route path="customers/*" element={<CustomerList />} />
+                <Route path="employees/*" element={<EmployeeList />} />
             </Routes>
-            <LocationProvider>
-                <Routes>
-                    <Route path="locations/*" element={<LocationList />} />
-                </Routes>
-            </LocationProvider>
-            <AnimalProvider>
-                <Routes>
-                    <Route path="animals/*" element={<AnimalList />} />
-                </Routes>
-            </AnimalProvider>
-            <CustomerProvider>
-                <Routes>
-                    <Route path="customers/*" element={<CustomerList />} />
-                </Routes>
-            </CustomerProvider>
-            <EmployeeProvider>
-                <Routes>
-                    <Route path="employees/*" element={<EmployeeList />} />
-                </Routes>
-            </EmployeeProvider>
-        </>
-    )}
 
+        </EmployeeProvider>
+        </CustomerProvider>
+        </AnimalProvider>
+        </LocationProvider>
+    )}

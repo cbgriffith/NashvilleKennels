@@ -9,15 +9,15 @@ export const AnimalList = () => {
 
   //useEffect - reach out to the world for something
   useEffect(() => {
-    console.log("AnimalList: useEffect - getAnimals")
+    // console.log("AnimalList: useEffect - getAnimals")
     getAnimals()
-
+// eslint-disable-next-line
   }, [])
 
 
   return (
     <div className="animals">
-      {console.log("AnimalList: Render", animals)}
+      {/* {console.log("AnimalList: Render", animals)} */}
       {
         animals.map(animal => {
           return <AnimalCard key={animal.id} animal={animal} />

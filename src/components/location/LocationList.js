@@ -7,15 +7,15 @@ export const LocationList = () => {
   const { locations, getLocations } = useContext(LocationContext)
 
   useEffect(() => {
-    console.log("LocationList: useEffect - getLocations")
+    // console.log("LocationList: useEffect - getLocations")
     getLocations()
-
+// eslint-disable-next-line
   }, [])
 
 
   return (
     <div className="locations">
-      {console.log("LocationList: Render", locations)}
+      {/* {console.log("LocationList: Render", locations)} */}
       {
         locations.map(location => {
           return <LocationCard key={location.id} location={location} />

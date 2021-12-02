@@ -7,15 +7,15 @@ export const EmployeeList = () => {
   const { employees, getEmployees } = useContext(EmployeeContext)
 
   useEffect(() => {
-    console.log("EmployeeList: useEffect - getEmployees")
+    // console.log("EmployeeList: useEffect - getEmployees")
     getEmployees()
-
+// eslint-disable-next-line
   }, [])
 
 
   return (
     <div className="employees">
-      {console.log("EmployeeList: Render", employees)}
+      {/* {console.log("EmployeeList: Render", employees)} */}
       {
         employees.map(employee => {
           return <EmployeeCard key={employee.id} employee={employee} />
