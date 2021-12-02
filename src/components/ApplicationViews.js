@@ -9,24 +9,26 @@ import { CustomerProvider } from "./customer/CustomerProvider"
 import { CustomerList } from "./customer/CustomerList"
 import { EmployeeProvider } from "./employee/EmployeeProvider"
 import { EmployeeList } from "./employee/EmployeeList"
+import { AnimalForm } from "./animal/AnimalForm"
 
 export const ApplicationViews = () => {
     return (
         <LocationProvider>
-        <AnimalProvider>
-        <CustomerProvider>
-        <EmployeeProvider>
+            <AnimalProvider>
+                <CustomerProvider>
+                    <EmployeeProvider>
 
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="locations/*" element={<LocationList />} />
-                <Route path="animals/*" element={<AnimalList />} />
-                <Route path="customers/*" element={<CustomerList />} />
-                <Route path="employees/*" element={<EmployeeList />} />
-            </Routes>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="locations/*" element={<LocationList />} />
+                            <Route path="animals/*" element={<AnimalList />} />
+                            <Route path="animals/create/*" element={<AnimalForm />} />
+                            <Route path="customers/*" element={<CustomerList />} />
+                            <Route path="employees/*" element={<EmployeeList />} />
+                        </Routes>
 
-        </EmployeeProvider>
-        </CustomerProvider>
-        </AnimalProvider>
+                    </EmployeeProvider>
+                </CustomerProvider>
+            </AnimalProvider>
         </LocationProvider>
     )}
