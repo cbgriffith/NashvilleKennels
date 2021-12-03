@@ -43,7 +43,7 @@ export const AnimalForm = () => {
       /* Animal is an object with properties.
       Set the property to the new value
       using object bracket notation. */
-      newAnimal[event.target.id] = event.target.value
+      newAnimal[event.target.id] = parseInt(event.target.value) ? parseInt(event.target.value) : event.target.value
       // update state
       setAnimal(newAnimal)
     }
