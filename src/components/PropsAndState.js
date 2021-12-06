@@ -5,14 +5,14 @@ export const PropsAndState = ({ yourName }) => {
 
   const handleClick = () => {
     //good practice:
-    //make a copy of state, modifiy it, and then setState to the copy
+    //make a copy of state, modify it, and then setState to the copy
     const newCountClicks = ++countClicks
     setCountClicks(newCountClicks)
   }
 
   return (
     <>
-      <h3>Welcome, {yourName} </h3>
+      <h3>Welcome, {localStorage.kennel_customer_name} </h3>
       <p>{countClicks}</p>
       <button onClick={(handleClick)}>Click Me</button>
     </>
