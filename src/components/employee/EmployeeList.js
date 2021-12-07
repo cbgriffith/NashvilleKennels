@@ -20,7 +20,7 @@ export const EmployeeList = () => {
 
   return (
     <>
-      <h2>Employees</h2>
+      <h1>Employees</h1>
         <button onClick={() => {navigate("create")}}>
        Add Employee 
         </button>

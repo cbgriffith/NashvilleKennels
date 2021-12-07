@@ -14,6 +14,8 @@ export const LocationList = () => {
 
 
   return (
+    <>
+    <h1>Locations</h1>
     <div className="locations">
       {/* {console.log("LocationList: Render", locations)} */}
       {
@@ -22,5 +24,6 @@ export const LocationList = () => {
         })
       }
     </div>
+    </>
   )
 }

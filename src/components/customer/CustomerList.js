@@ -16,6 +16,8 @@ export const CustomerList = () => {
 
 
   return (
+    <>
+    <h1>Customers</h1>
     <div className="customers">
       {/* {console.log("CustomerList: Render", customers)} */}
       {
@@ -24,5 +26,6 @@ export const CustomerList = () => {
         })
       }
     </div>
+    </>
   )
 }
