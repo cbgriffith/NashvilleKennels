@@ -6,6 +6,7 @@ export const Register = (props) => {
     const firstName = useRef()
     const lastName = useRef()
     const email = useRef()
+    // eslint-disable-next-line
     const verifyPassword = useRef()
     const conflictDialog = useRef()
     const navigate = useNavigate()

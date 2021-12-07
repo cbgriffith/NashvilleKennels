@@ -20,7 +20,20 @@ export const LocationList = () => {
       {/* {console.log("LocationList: Render", locations)} */}
       {
         locations.map(location => {
-          return <LocationCard key={location.id} location={location} />
+          let employees = location.employees.filter(e => e.locationId === location.id)
+          let totalEmployees = employees.length
+          let oneEmployee = (totalEmployees === 1) ? "employee" : "employees";
+          let animals = location.animals.filter(a => a.locationId === location.id)
+          let totalAnimals = animals.length
+          let oneAnimal = (totalAnimals === 1) ? "animal" : "animals";
+          return <LocationCard
+           key={location.id} 
+           location={location}
+           totalEmployees={totalEmployees}
+           oneEmployee={oneEmployee}
+           totalAnimals={totalAnimals}
+           oneAnimal={oneAnimal}
+           />
         })
       }
     </div>

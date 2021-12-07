@@ -73,6 +73,7 @@ export const AnimalForm = () => {
         setIsLoading(false)
       }
     })
+    // eslint-disable-next-line
   }, [])
 
   //since state controlls this component, we no longer need

@@ -19,6 +19,7 @@ const { getAnimalById, releaseAnimal } = useContext(AnimalContext)
     .then((response) => {
       setAnimal(response)
     })
+    // eslint-disable-next-line
     }, [])
 
 

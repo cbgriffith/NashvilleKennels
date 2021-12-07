@@ -9,6 +9,7 @@ export const EmployeeDetail = () => {
 	const [employee, setEmployee] = useState({})
 
 	const {employeeId} = useParams();
+    // eslint-disable-next-line
 	const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,6 +18,7 @@ export const EmployeeDetail = () => {
     .then((response) => {
       setEmployee(response)
     })
+    // eslint-disable-next-line
     }, [])
 
   return (

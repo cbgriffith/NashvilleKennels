@@ -9,6 +9,7 @@ export const LocationDetail = () => {
 	const [location, setLocation] = useState({})
 
 	const {locationId} = useParams();
+    // eslint-disable-next-line
 	const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,6 +18,7 @@ export const LocationDetail = () => {
     .then((response) => {
       setLocation(response)
     })
+    // eslint-disable-next-line
     }, [])
 
   return (
@@ -24,8 +26,14 @@ export const LocationDetail = () => {
       <h3 className="location__name">{location.name}</h3>
       <address className="location__address">{location.address}</address>
       {/* What's up with the question mark???? See below.*/}
-      <div className="location__employees">Employees: {location.employee?.name}</div>
-      <div className="location__animals">Residents: {location.animal?.name}</div>
+      <h4 className="location__employees">Employees</h4>
+      <ul className="location__employeesList">
+          {location.employees?.map(employee => <li key={employee.id}>{employee.name}</li>)}
+      </ul>
+      <h4 className="location__animals">Animals</h4>
+      <ul className="location__animalsList">
+          {location.animals?.map(animal => <li key={animal.id}>{animal.name}</li>)}
+      </ul>
     </section>
   )
 }

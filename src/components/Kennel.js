@@ -1,15 +1,3 @@
-// import React from "react"
-// import { NavBar } from "./nav/NavBar"
-// import { ApplicationViews } from "./ApplicationViews"
-// import "./Kennel.css"
-
-// export const Kennel = () => (
-//     <>
-//         <NavBar />
-//         <ApplicationViews />
-//     </>
-// )
-
 import React, { useState } from "react";
 import { NavBar } from "./nav/NavBar";
 import { ApplicationViews } from "./ApplicationViews";
@@ -19,6 +7,7 @@ import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
 
 export const Kennel = () => {
+  // eslint-disable-next-line
   const [loggedin, setLoggedin] = useState(false);
 
   const changeState = (bool) => setLoggedin(bool);
