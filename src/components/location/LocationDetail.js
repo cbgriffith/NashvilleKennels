@@ -13,7 +13,7 @@ export const LocationDetail = () => {
 	const navigate = useNavigate();
 
   useEffect(() => {
-    console.log("useEffect", locationId)
+    // console.log("useEffect", locationId)
     getLocationById(locationId)
     .then((response) => {
       setLocation(response)
@@ -30,7 +30,7 @@ export const LocationDetail = () => {
       <ul className="location__employeesList">
           {location.employees?.map(employee => <li key={employee.id}>{employee.name}</li>)}
       </ul>
-      <h4 className="location__animals">Animals</h4>
+      <h4 className="location__animals">Current Residents</h4>
       <ul className="location__animalsList">
           {location.animals?.map(animal => <li key={animal.id}>{animal.name}</li>)}
       </ul>
