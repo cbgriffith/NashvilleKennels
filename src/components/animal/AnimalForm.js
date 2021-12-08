@@ -46,7 +46,7 @@ export const AnimalForm = () => {
             customerId: parseInt(animal.customerId),
             id: animal.id
         })
-        .then(() => navigate("/animals"))
+        .then(() => navigate(`/animals/detail/${animal.id}`))
       }else {
         //POST - add
         addAnimal({
